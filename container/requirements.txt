@@ -1,0 +1,9 @@
+numpy
+matplotlib
+pandas
+seaborn
+scikit-learn
+SimpleITK
+ipykernel
+notebook
+scikit-image

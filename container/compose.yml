@@ -1,0 +1,20 @@
+services:
+  prostate_prepro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: prostate_prepro
+    command: "tail -f /dev/null"
+    volumes:
+      - /home/esandoval/master/prostate_prepro/:/app/
+      - /home/Data/Datasets:/Datasets/
+    working_dir: /app
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

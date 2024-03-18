@@ -6,7 +6,7 @@ services:
     container_name: prostate_prepro
     command: "tail -f /dev/null"
     volumes:
-      - /home/esandoval/master/prostate_prepro/:/app/
+      - /home/esandoval/master/prostate_preprocessing/:/app/
       - /home/Data/Datasets:/Datasets/
     working_dir: /app
     environment:
